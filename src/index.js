@@ -1,12 +1,19 @@
 //@flow
-/**
- * A function that adds two numbers
- * @param  {number} a first number
- * @param  {number} b second number
- * @return {number}   numbers added together
- */
-export function sum(a: number, b: number): number {
-  return a + b;
+import readline from "readline";
+
+var io = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function run() {
+  io.question("loop", function(resp) {
+    if (resp == "q") {
+      io.close();
+    } else {
+      run();
+    }
+  });
 }
 
-console.log(sum(3, 2));
+run();
