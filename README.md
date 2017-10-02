@@ -1,3 +1,3 @@
-# Template EsLint, EsDoc Flow/Node Project
+# Node CLI Playground/Library
 
-Node Project setup using Flow Static Typing, EsLint for Linting, EsDoc for documentation, and Mocha+Chai+NYC for testing
+A Node CLI Example
