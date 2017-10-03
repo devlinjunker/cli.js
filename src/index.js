@@ -1,19 +1,12 @@
 //@flow
-import readline from "readline";
+import app from "./app.js";
 
-var io = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+let actions = new Map();
+
+actions.set("v", function(io) {
+  io.write("0.1.0\n");
 });
 
-function run() {
-  io.question("loop", function(resp) {
-    if (resp == "q") {
-      io.close();
-    } else {
-      run();
-    }
-  });
-}
+let cli = new app(">>", actions);
 
-run();
+cli.start();
